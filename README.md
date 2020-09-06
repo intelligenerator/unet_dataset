@@ -36,7 +36,7 @@ running.
 Clone the git repository
 
 ```bash
-git clone https://github.com/intelligenerator/unet.git
+git clone https://github.com/intelligenerator/unet_dataset.git
 cd unet
 ```
 
@@ -65,7 +65,7 @@ Happy coding!
 
 ## Usage
 
-Assuming, you have cloned this repo into the `unet/` subfolder, you can import
+Assuming, you have cloned this repo into the `unet_dataset/` subfolder, you can import
 it from your project root:
 
 ```python
@@ -91,7 +91,7 @@ the process for submitting pull requests to us.
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available,
-see the [tags on this repository](https://github.com/intelligenerator/unet/tags).
+see the [tags on this repository](https://github.com/intelligenerator/unet_dataset/tags).
 
 ## Authors
 
@@ -100,7 +100,7 @@ Henry Meyer - [Rapirkomet](https://github.com/rapirkomet)
 Boldizsar Zopcsak - [BoldizsarZopcsak](https://github.com/BoldizsarZopcsak)
 
 See also the list of
-[contributors](https://github.com/intelligenerator/unet/contributors)
+[contributors](https://github.com/intelligenerator/unet_dataset/contributors)
 who participated in this project.
 
 ## License
