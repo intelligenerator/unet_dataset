@@ -28,10 +28,6 @@ To install pytorch with CUDA support, conda is recommended. An installation
 guide is available in the conda docs:
 https://docs.conda.io/projects/conda/en/latest/user-guide/install/
 
-To be able to view und run the example notebooks on your machine, jupyter is
-required. An installation guide can be found on their website:
-https://jupyter.org/install
-
 ### Initial setup
 
 A step by step series of examples that tell you how to get the project up and
