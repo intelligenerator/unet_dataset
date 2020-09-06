@@ -96,6 +96,8 @@ see the [tags on this repository](https://github.com/intelligenerator/unet/tags)
 ## Authors
 
 Ulysse McConnell - [umcconnell](https://github.com/umcconnell/)
+Henry Meyer - [Rapirkomet](https://github.com/rapirkomet)
+Boldizsar Zopcsak - [BoldizsarZopcsak](https://github.com/BoldizsarZopcsak)
 
 See also the list of
 [contributors](https://github.com/intelligenerator/unet/contributors)
