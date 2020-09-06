@@ -19,11 +19,6 @@ pytorch xView2 image loader.
 These instructions will get you a copy of the project up and running on your
 local machine for development and testing purposes.
 
-If you would just like to play around with the model without downloading
-anything to your machine, you can open this notebook in Google Colab
-(Note that a Google account is required to run the notebook):
-[Open in Google Colab][1]
-
 ### Prerequisites
 
 You will need python3 and pip3 installed on your machine. You can install it
