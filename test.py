@@ -1,17 +1,38 @@
+import random
+
 import numpy as np
-import torch
 
 import matplotlib.pyplot as plt
-import torchvision as tv
+import torch
+import torchvision.transforms.functional as tf
+from src.unet_dataset import SatelliteImageDataset
 from torch.utils.data import DataLoader
 
-from src.unet_dataset import SatelliteImageDataset
 
-transforms = tv.transforms.Compose([
-    tv.transforms.FiveCrop(512),
-    tv.transforms.Lambda(lambda crops: torch.stack(
-        [tv.transforms.ToTensor()(crop) for crop in crops]))
-])
+def transforms(x, y):
+    x = list(tf.five_crop(x, 512))
+
+    y = list(tf.five_crop(y, 512))
+
+    for i in range(len(x)):
+        if random.random() > 0.5:
+            x[i] = tf.hflip(x[i])
+            y[i] = tf.hflip(y[i])
+
+        if random.random() > 0.5:
+            x[i] = tf.vflip(x[i])
+            y[i] = tf.vflip(y[i])
+
+        if random.random() > 0.5:
+            angle = random.randint(-30, 30)
+            x[i] = tf.rotate(x[i], angle)
+            y[i] = tf.rotate(y[i], angle)
+
+    x = torch.stack([tf.to_tensor(crop) for crop in x])
+    y = torch.stack([tf.to_tensor(crop) for crop in y])
+
+    return x, y
+
 
 # Instantiate the new Dataset class to test it
 satellite_image_dataset = SatelliteImageDataset(images_dir='data/images/',
