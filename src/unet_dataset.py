@@ -20,7 +20,8 @@ class SatelliteImageDataset(Dataset):
     targets_dir: str
         Directory with all the targets.
     transform: callable, optional
-        Optional transform to be applied on a sample. Default is `None`.
+        Optional transform to be applied on a sample. Transform receives
+        the current image **and** target! Default is `None`.
     """
 
     def __init__(self, images_dir, targets_dir, transform=None):
@@ -40,7 +41,6 @@ class SatelliteImageDataset(Dataset):
         target = Image.open(self.targets_list[idx])
 
         if self.transform:
-            image = self.transform(image)
-            target = self.transform(target)
+            image, target = self.transform(image, target)
 
         return image, target
