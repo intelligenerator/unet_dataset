@@ -37,7 +37,7 @@ Clone the git repository
 
 ```bash
 git clone https://github.com/intelligenerator/unet_dataset.git
-cd unet
+cd unet_dataset
 ```
 
 Then create your conda virtual environment
